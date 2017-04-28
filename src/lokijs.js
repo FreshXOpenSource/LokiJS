@@ -5668,6 +5668,18 @@
       var lval = rcd[index[lbound]][prop];
       var uval = rcd[index[ubound]][prop];
 
+      if(lval === undefined || lval === null) {
+        lval = false;
+      }
+
+      if(val === undefined || val === null) {
+        val = false;
+      }
+
+      if(uval === undefined || uval === null) {
+        uval = false;
+      }
+
       switch (op) {
       case '$eq':
         if (lval !== val) {
